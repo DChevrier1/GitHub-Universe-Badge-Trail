@@ -12,14 +12,23 @@ Your expedition saves on the badge. Optional white case-light effects and
 conference reminder cards share the same control style as Fallout. This package
 contains no personal agenda, employer branding or real traveler identities.
 
+## From outfitter to riverbank
+
+| Start your expedition | Stock the wagon | Choose a crossing |
+| --- | --- | --- |
+| ![Universe Trail title screen with wagon and oxen](screenshots/title.png) | ![Outfitter menu with food, oxen, clothing and spare parts](screenshots/outfitter.png) | ![Hudson River crossing with river depth, weather and crossing choices](screenshots/river-crossing.png) |
+
+Simulator screenshots rendered from the included app code at 2× its native
+320 × 240 resolution. The river screen uses a deterministic example expedition;
+no personal traveler names or saved game were loaded.
+
 ## Install in five steps
 
 You need a **GitHub Universe 2026 Badger 2350 badge**, its supplied firmware and a
 USB cable that carries data. No firmware flashing or Python installation is
 needed for the direct-folder method.
 
-1. Download this repository using **Code → Download ZIP**, then extract it. The
-   repository is private, so you must be signed into an account with access.
+1. Download this repository using **Code → Download ZIP**, then extract it.
 2. Open the badge's supplied **USB Disk / Mass Storage** app and connect USB.
    A drive named **BADGER** should appear. Copy its current contents somewhere
    safe before making changes.
@@ -68,14 +77,14 @@ removing power. USB removal is safe after the host has finished copying/ejecting
 | Left / Right | Contextual controls, including hunting movement |
 | Home | Save and return to the supplied launcher |
 
-Choose **New expedition**, an occupation and party names, then select a departure
+Choose **Travel to Universe**, an occupation and party names, then select a departure
 month and buy supplies. You need oxen and food before setting out. Camp provides
 access to supplies, pace, rations, rest, hunting and the journal. Read the in-game
 help for river crossing, hunting and wagon repair controls.
 
 **Lights / Reminders** appears in the title and camp menus. Decorative lights
 default to Off. Brightness Off disables all case lights, including reminders.
-Reminders are optional and the public-ready package ships with no agenda. During
+Reminders are optional and this package ships with no agenda. During
 a reminder, Select dismisses and Down snoozes; the expedition pauses. A correct
 badge clock and an awake custom app are required. Automatic ECO mode is currently
 a Fallout feature, not a Trail feature.
@@ -91,13 +100,14 @@ python3 build.py
 ```
 
 The build creates `dist/universe_trail-badge.zip` with only the allowlisted app, install
-instructions and linked documentation. Extract it and copy `apps/universe_trail` using the steps above. Personal
-`config.json`, credentials and save files are excluded from the build allowlist.
-Keep README and NOTICE with the download for instructions and provenance; copy
+instructions, screenshots and linked documentation. Extract it and copy
+`apps/universe_trail` using the steps above. Personal configuration, credentials and
+save files are excluded from the build allowlist.
+Keep the documentation and screenshots with the download for reference. Copy
 only the app folder to the badge.
 
-Runtime code lives in `apps/universe_trail/`; portable logic is in `core.py`. The app is
-self-contained and does not require either of the other two custom apps. Stock
+Runtime code lives in `apps/universe_trail/`; portable logic is in `core.py`.
+The app is self-contained and does not require either of the other two custom apps. Stock
 firmware is a device prerequisite and is deliberately not redistributed here.
 
 ## Compatibility and troubleshooting
@@ -116,9 +126,9 @@ also tested locally. Older badges and other firmware versions are not verified.
 - **No colored case lights:** the badge's case LEDs are white; screen colors are
   unrelated. Check the app's brightness/decorative-light settings.
 
-This repository is **private**. It contains only this custom app, generic defaults,
-tests and documentation—no stock badge apps, firmware, personal agenda, passwords,
-Wi-Fi secrets, device backups or browser sessions.
+The download contains this custom app, generic defaults, tests and documentation.
+Stock firmware, personal agendas, credentials, device backups and browser sessions
+are excluded.
 
 ## Credits and maintenance
 
@@ -126,6 +136,6 @@ Wi-Fi secrets, device backups or browser sessions.
 trademark provenance. This is an unofficial custom app, not an official firmware
 release. Third-party artwork and marks retain their owners' rights.
 
-For each completed change, update the README/help, run relevant checks, and push
-the completed source to this private repository. Keep it private until the owner
-explicitly approves a visibility change.
+For each change, update the README and in-app help, run the checks above, and
+keep documentation screenshots aligned with the included app. Keep personal
+configuration and save data outside version control.
